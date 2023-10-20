@@ -110,7 +110,7 @@
     },
     responsiveImageItem(element) {
       if (element.prop("tagName") === "IMG") {
-        element.addClass("img-fluid");
+        element.addClass("img-fluidd");
       }
     },
     openLightBox(element, lightboxId) {
@@ -150,7 +150,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          index = i-1 ;
         }
       });
       next =
@@ -189,7 +189,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i+1;
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
